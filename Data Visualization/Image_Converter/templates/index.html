@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Theme Converter</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Theme Converter</h1>
+      <form id="upload-form" enctype="multipart/form-data">
+        <label for="file">Choose Image</label>
+        <input type="file" name="file" id="file" accept="image/*" />
+        <select name="theme" id="theme">
+          <option value="charcoal">Charcoal</option>
+          <option value="sepia">Sepia</option>
+          <option value="grayscale">Grayscale</option>
+        </select>
+        <button type="submit" id="submit-btn">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("upload-form")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const formData = new FormData();
+          formData.append("file", document.getElementById("file").files[0]);
+          formData.append("theme", document.getElementById("theme").value);
+
+          try {
+            const response = await fetch("/process_image", {
+              method: "POST",
+              body: formData,
+            });
+
+            if (!response.ok) {
+              throw new Error("Failed to process image");
+            }
+
+            // Redirect to view image page after processing
+            window.location.href = "/process_image";
+          } catch (error) {
+            console.error(error.message);
+          }
+        });
+    </script>
+  </body>
+</html>
