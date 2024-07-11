@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Naveen Gowtham.K.T</title>
+    <link
+      href="{% static '/css/main.css'  %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      .square-img {
+        width: 200px; /* You can adjust this value as needed */
+        height: 200px; /* Same as width to maintain square shape */
+        object-fit: cover; /* Ensures the image covers the entire space without distortion */
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card card-body h-100 border-info" id="profile-wrapper">
+            <img
+              id="profile-pic"
+              src="{% static 'images/naveen.png' %}"
+              class="square-img"
+              <!--
+              Added
+              class
+              to
+              make
+              the
+              image
+              square
+              --
+            />
+
+            <hr />
+            <h4>Naveen Gowtham.K.T</h4>
+            <p>A Passionate Computer Science and Engineering Student</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <br />
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-body">
+            <h5>E D U C A T I O N</h5>
+            <hr />
+            <p>2020 - 2024<br />CGPA: 8.25<br />SONA COLLEGE OF TECHNOLOGY</p>
+            <p>
+              2005 - 2020<br />Grade 10: 77.83%<br />J.R.CAMBRIEDGGE SCHOOL<br />Grade
+              12: 73.5%
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card card-body">
+            <h5>Skills</h5>
+            <hr />
+            <ol>
+              <li>Machine Learning</li>
+              <li>Data Analytics and Data Visualization</li>
+              <li>Natural Language Processing</li>
+              <li>Python</li>
+              <li>C/C++</li>
+              <li>Java</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
