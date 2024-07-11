@@ -1,0 +1,19 @@
+{% extends "todo/base.html" %} {% block content %}
+<div class="todo-form">
+  <form method="POST" class="form-inline">
+    {% csrf_token %} {{ form.task }}
+    <button type="submit" class="btn btn-primary">Add Task</button>
+  </form>
+</div>
+<div class="todo-list">
+  {% for todo in todos %}
+  <div class="todo-item">
+    <span>{{ todo.task }}</span>
+    <form method="POST" action="{% url 'delete_todo' todo.id %}">
+      {% csrf_token %}
+      <button type="submit">Delete</button>
+    </form>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
