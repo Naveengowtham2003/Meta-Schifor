@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naveen Gowtham's Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+          <li><a href="{% url 'blog' %}">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Technical Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </aside>
+      <div class="content">{% block content %} {% endblock %}</div>
+    </main>
+    <footer>
+      <p>
+        Contact: 9443666196 | Email: naveengowtham2003@gmail.com |
+        <a
+          href="https://www.linkedin.com/in/naveen-gowtham-k-t-573589219/"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

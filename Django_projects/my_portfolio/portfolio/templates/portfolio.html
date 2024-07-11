@@ -1,0 +1,81 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section id="about">
+  <h2>About Me</h2>
+
+  <img src="{% static 'images/My_image.png' %}" alt="Naveen Gowtham" />
+
+  <p class="about-text">
+    Computer Science and Engineering student with a strong passion for acquiring
+    knowledge and learning new skills. I am eager to gain practical work
+    experience and apply my theoretical knowledge in a professional setting. I
+    am excited about the opportunity to contribute to my organization and make a
+    meaningful impact. I have involved myself in the field of Artificial
+    Intelligence and done several projects.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li>Machine Learning</li>
+    <li>Data Analytics and Data Visualization</li>
+    <li>Natural Language Processing</li>
+    <li>Python</li>
+    <li>Django</li>
+    <li>Java</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div>
+    <h3>Resume Parsing System</h3>
+    <p>
+      A machine learning and NLP-based web application. It efficiently processes
+      the resumes and extracts relevant information about the applicants. This
+      information, along with the resumes, is then forwarded to the recruiters
+      for their review and consideration.
+    </p>
+  </div>
+  <div>
+    <h3>Fake News Detection</h3>
+    <p>
+      Machine Learning and Deep Learning based project which is built using
+      Recurrent Neural Network and LSTM.
+    </p>
+  </div>
+  <div>
+    <h3>E-Commerce Website using Django</h3>
+    <p>
+      This website is used as a portal for sellers as well as buyers where the
+      seller can sell anything that they want while the buyers can buy it. It is
+      built using Django web framework.
+    </p>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Google Data Analytics (Specialization: Coursera)</li>
+    <li>Machine Learning on Google Cloud Specialization (Coursera)</li>
+    <li>
+      Understanding and Visualizing Data using Python (Coursera - University of
+      Michigan)
+    </li>
+    <li>Python AI Development: Introduction (Infosys Springboard)</li>
+  </ul>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div>
+    <h3>Sona College of Technology</h3>
+    <p>B.E Computer Science Engineer, 2020-2024, Grade: 8.25 CGPA</p>
+  </div>
+  <div>
+    <h3>J.R. Cambridge School</h3>
+    <p>Grade 10: 77.83%, Grade 12: 73.50%</p>
+  </div>
+</section>
+{% endblock %}
